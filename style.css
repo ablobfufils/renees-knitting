@@ -1,32 +1,54 @@
 body {
     width: 100%;
     min-height: 100%;
+    background: repeating-linear-gradient(
+      90deg,
+      hsla(344, 100%, 80%, 0.85), 
+      hsla(344, 100%, 80%, 0.85) 10px,
+      hsla(294, 82%, 69%, 0.74) 10px,
+      hsla(294, 82%, 69%, 0.74) 20px);
 
 }
 
 .grid-container {
     display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 0.2fr 3.1fr 0.2fr;
-  grid-template-areas: "banner" "head" "cont" "footer";
-}
+    grid-template-columns: 0.5fr 1.9fr 0.5fr;
+    grid-template-rows: 0.5fr 0.2fr 3.8fr 0.3fr;
+    gap: 1px 1px;
+    grid-template-areas: ". banner ." ". head ." "bg-left cont bg-right" ". footer .";
+  }
 
-.top-banner {
-    display: grid;
-    grid-area: banner;
-}
+  .bg-left { 
+      grid-area: bg-left; 
+      display: grid;
+    }
+  
+  .bg-right { 
+      grid-area: bg-right;
+      display: grid;
+    }
+  
+.banner { 
+      grid-area: banner;
+      display: grid;
+    }
+  
+.head { 
+      grid-area: head;
+      display: grid;
+    }
+  
+  .cont { 
+      grid-area: cont;
+      display: grid;
+    }
 
-.header {
-    display: grid;
-    grid-area: head;
-}
-
-.content {
-    display: grid;
-    grid-area: cont;
-}
-
-.footer {
-    display: grid;
-    grid-area: footer;
-}
+    h1 {
+      text-shadow: 0px 1px 1px rgba(255,255,2555,0.75), 0px -1px 1px rgba(0,0,0,.75);
+      color: hsla(294, 82%, 28%, 0.89);
+    }
+  
+  .footer { 
+      grid-area: footer;
+      display: grid; 
+    }
