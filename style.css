@@ -1,15 +1,32 @@
-.top-banner{
+body {
+    width: 100%;
+    min-height: 100%;
 
+}
+
+.grid-container {
+    display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.2fr 3.1fr 0.2fr;
+  grid-template-areas: "banner" "head" "cont" "footer";
+}
+
+.top-banner {
+    display: grid;
+    grid-area: banner;
 }
 
 .header {
-
+    display: grid;
+    grid-area: head;
 }
 
 .content {
-
+    display: grid;
+    grid-area: cont;
 }
 
 .footer {
-    
+    display: grid;
+    grid-area: footer;
 }
