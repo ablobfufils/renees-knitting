@@ -8,6 +8,7 @@ body {
       hsla(294, 82%, 69%, 0.64) 10px,
       hsla(294, 82%, 69%, 0.64) 20px);
       font-family: 'Raleway', sans-serif;
+      background-clip: padding-box;
 
 }
 
@@ -42,7 +43,7 @@ body {
       text-align: center;
       align-self: top;
       justify-self: center;
-      background: linear-gradient(to bottom right, hsla(329, 84%, 68%, 1), hsla(299, 75%, 45%, 0.86));
+      background: linear-gradient(to bottom right, hsla(329, 84%, 68%, 1), hsla(299, 75%, 45%, 0.86), hsla(329, 84%, 68%, 1));
       border-radius: 5px;
       border-style: double; 
       border-color: white; 
@@ -92,6 +93,13 @@ body {
   .cont { 
       grid-area: cont;
       display: grid;
+      width: 600px;
+      justify-self: center;
+      background-color: hsla(299, 75%, 100%, 0.27);
+      background-clip: padding-box;
+      border-radius: 5px;
+      border-style: double;
+      border-color: white; 
     }
 
     h1 {
@@ -104,5 +112,9 @@ body {
   
   .footer { 
       grid-area: footer;
-      display: grid; 
+      display: grid;
+      width: 100%;
+      height: 20px; 
+      background-color: hsla(299, 75%, 1%, 0.31);
+      align-self: end;
     }
